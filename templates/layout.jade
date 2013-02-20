@@ -1,0 +1,50 @@
+!!! 5
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      title
+        block title
+          = locals.name
+      link(rel='stylesheet', href='/2012/css/bootstrap.min.css')
+      link(rel='stylesheet', href='/2012/css/bootstrap-responsive.min.css')
+      link(rel='stylesheet', href='/2012/css/app.css')
+  body
+    nav.navbar.navbar-fixed-top.navbar-inverse
+      .navbar-inner
+        .container
+          include menu
+          a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href=locals.url, title=locals.name, rel='home')= locals.name
+          .nav-collapse.collapse
+            ul.nav
+              +menu('Home', '/2012/')
+              +menu('Call for Papers', '/2012/cfp.html')
+              +menu('Programme', '/2012/programme.html')
+              +menu('Keynotes', '/2012/keynotes.html')
+              +menu('Location', '/2012/location.html')
+              +menu('Organisation', '/2012/organisation.html')
+              +menu('FAQ', '/2012/faq.html')
+    .container
+      header.subhead
+        block subhead
+          a(href=locals.url)
+            img(alt=locals.name, src='/2012/img/logo.png')
+      section.content
+        block content
+    footer.footer
+      div.container
+        block footer
+          p Designed by 
+            a(href='http://www.doc.ic.ac.uk/~ph1310', title='Petr Hosek') Petr Hosek
+            , 
+            a(href='http://www3.imperial.ac.uk/', title='Imperial College London') Imperial College London
+    script(src='http://code.jquery.com/jquery-latest.js')
+    script(src='/2012/js/bootstrap.min.js')
+    script(src='/2012/js/app.js')
+    include analytics
+    +analytics('UA-22691589-3')
