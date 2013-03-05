@@ -1,6 +1,7 @@
 {
   "locals": {
     "url": "http://iccsw.doc.ic.ac.uk/2012",
+    "root": "/2012",
     "name": "ICCSW'12",
     "owner": "Imperial College Computing Student Workshop, Imperial College London",
     "description": "2012 Imperial College Computing Student Workshop"

@@ -7,9 +7,9 @@ html(lang='en')
       title
         block title
           = locals.name
-      link(rel='stylesheet', href='/2012/css/bootstrap.min.css')
-      link(rel='stylesheet', href='/2012/css/bootstrap-responsive.min.css')
-      link(rel='stylesheet', href='/2012/css/app.css')
+      link(rel='stylesheet', href=locals.root+'/css/bootstrap.min.css')
+      link(rel='stylesheet', href=locals.root+'/css/bootstrap-responsive.min.css')
+      link(rel='stylesheet', href=locals.root+'/css/app.css')
   body
     nav.navbar.navbar-fixed-top.navbar-inverse
       .navbar-inner
@@ -22,18 +22,18 @@ html(lang='en')
           a.brand(href=locals.url, title=locals.name, rel='home')= locals.name
           .nav-collapse.collapse
             ul.nav
-              +menu('Home', '/2012/')
-              +menu('Call for Papers', '/2012/cfp.html')
-              +menu('Programme', '/2012/programme.html')
-              +menu('Keynotes', '/2012/keynotes.html')
-              +menu('Location', '/2012/location.html')
-              +menu('Organisation', '/2012/organisation.html')
-              +menu('FAQ', '/2012/faq.html')
+              +menu('Home', locals.root+'/')
+              +menu('Call for Papers', locals.root+'/cfp.html')
+              +menu('Programme', locals.root+'/programme.html')
+              +menu('Keynotes', locals.root+'/keynotes.html')
+              +menu('Location', locals.root+'/location.html')
+              +menu('Organisation', locals.root+'/organisation.html')
+              +menu('FAQ', locals.root+'/faq.html')
     .container
       header.subhead
         block subhead
           a(href=locals.url)
-            img(alt=locals.name, src='/2012/img/logo.png')
+            img(alt=locals.name, src=locals.root+'/img/logo.png')
       section.content
         block content
     footer.footer
@@ -44,7 +44,7 @@ html(lang='en')
             , 
             a(href='http://www3.imperial.ac.uk/', title='Imperial College London') Imperial College London
     script(src='http://code.jquery.com/jquery-latest.js')
-    script(src='/2012/js/bootstrap.min.js')
-    script(src='/2012/js/app.js')
+    script(src=locals.root+'/js/bootstrap.min.js')
+    script(src=locals.root+'/js/app.js')
     include analytics
     +analytics('UA-22691589-3')
