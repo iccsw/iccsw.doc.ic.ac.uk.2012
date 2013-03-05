@@ -61,7 +61,7 @@ There are a number of accepted submissions that are not truly "original
 work" (e.g., they have been previously presented in a longer format at a
 previous conference/workshop or accepted in a journal). If you paper is
 one of these submissions, we ask that you kindly revise your manuscript
-in the following way: please use ```\footnote{...}``````` to add a
+in the following way: please use ``\footnote{...}`` to add a
 footnote to your title. Please include text similar to the following:
 
 *A longer version of this paper appeared in the proceedings of
@@ -77,7 +77,8 @@ to:
 ```
 \title{My really awesome paper\footnote{A longer version of this paper
 appeared in the proceedings of ABC~\cite{MyPaper}.}}
-```````
+```
+
 
 __What else do I need to do before doing making my submission?__
 
